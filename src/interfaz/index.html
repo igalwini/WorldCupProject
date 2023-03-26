@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mundial</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <img src="https://static.wixstatic.com/media/bbe01b_c4b47521203846faa70386699da89057~mv2.png/v1/crop/x_0,y_0,w_898,h_790/fill/w_480,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/FIFA%20World%20Cup%20Qatar%202022%20Logo%20(PNG-1080p)%20-%20FileVector69.png" class="logo" alt="logo mundial"></img>
+        <span class="mdc-top-app-bar__title">MUNDIAL</span>
+      </section>
+    </div>
+
+    <div class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+
+            <button class="mdc-tab mdc-tab--active sample-content-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="material-symbols-outlined"id="logoFixture">tune</span>
+                <span class="mdc-tab__text-label">Fixture</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline sample-content-tab-indicator"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            
+            <button class="mdc-tab sample-content-tab" role="tab" aria-selected="false" tabindex="1">
+              <span class="mdc-tab__content">
+                <span class="material-symbols-outlined" id="logoTimer">timer</span>
+                <span class="mdc-tab__text-label">Cuenta Regresiva</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+
+            <button class="mdc-tab sample-content-tab" role="tab" aria-selected="false" tabindex="1">
+              <span class="mdc-tab__content">
+                <span class="material-symbols-outlined"id="logoGrupos">groups</span>
+                <span class="mdc-tab__text-label">Grupos</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+ 
+  <main class="mdc-top-app-bar--fixed-adjust">
+    <section class="content" id="SecFixture">
+      <div class="mdc-select mdc-select--outlined" id="comboBox">
+        <div class="mdc-select__anchor">
+          <span class="mdc-select__ripple"></span>
+          <span class="mdc-floating-label mdc-floating-label--float-above">Ordenar por:</span>
+          <span class="mdc-select__selected-text-container">
+            <span class="mdc-select__selected-text">Grupos</span>
+          </span>
+          <span class="mdc-select__dropdown-icon">
+            <svg
+                class="mdc-select__dropdown-icon-graphic"
+                viewBox="7 10 10 5" focusable="false">
+              <polygon
+                  class="mdc-select__dropdown-icon-inactive"
+                  stroke="none"
+                  fill-rule="evenodd"
+                  points="7 10 12 15 17 10">
+              </polygon>
+              <polygon
+                  class="mdc-select__dropdown-icon-active"
+                  stroke="none"
+                  fill-rule="evenodd"
+                  points="7 15 12 10 17 15">
+              </polygon>
+            </svg>
+          </span>
+          <span class="mdc-line-ripple"></span>
+        </div>
+      
+        <div class="mdc-select__menu demo-width-class mdc-menu mdc-menu-surface">
+          <ul class="mdc-list">
+            <li class="mdc-list-item" data-value="">
+              <span class="mdc-list-item__ripple"></span>
+            </li>
+            <li class="mdc-list-item" data-value="calendario" id="selectCalendario">
+              <span class="mdc-list-item__ripple"></span>
+              <span class="mdc-list-item__text">Calendario</span>
+            </li>
+            <li class="mdc-list-item mdc-list-item--selected" data-value="grupos" aria-selected="true" id="selectGrupos" >
+              <span class="mdc-list-item__ripple" ></span>
+              <span class="mdc-list-item__text" >Grupos</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+     
+     <div id="divGrupos">
+     
+      
+   <section  id="A" class="grupos"><h1>GRUPO A</h1>
+  </section>
+    <section  id="B"  class="grupos"><h1>GRUPO B</h1>
+   </section>
+    <section  id="C"  class="grupos"><h1>GRUPO C</h1>
+    </section>
+   <section  id="D"  class="grupos"><h1>GRUPO D</h1>
+   </section>
+   <section  id="E"  class="grupos"><h1>GRUPO E</h1>
+   </section>
+   <section  id="F"  class="grupos"><h1>GRUPO F</h1>
+   </section>
+   <section  id="G"  class="grupos"><h1>GRUPO G</h1>
+   </section>
+   <section  id="H"  class="grupos"><h1>GRUPO H</h1>
+   </section> 
+   <section  id="octavos" class="grupos"><h1>OCTAVOS DE FINAL</h1>
+   </section>
+   <section  id="cuartos"  class="grupos"><h1>CUARTOS DE FINAL</h1>
+   </section>
+   <section  id="semis"  class="grupos"><h1>SEMIFINALES</h1>
+   </section> 
+  
+   <section  id="final"  class="final"><h1>FINAL</h1>
+   </section> 
+     </div>
+   <div id="divCalendario">
+   
+      <section  class="grupos" id="20 de Noviembre"><h1>20 de Noviembre</h1>
+      </section>
+        <section  class="grupos" id="21 de Noviembre"><h1>21 de Noviembre</h1>
+       </section>
+        <section  class="grupos" id="22 de Noviembre"><h1>22 de Noviembre</h1>
+        </section>
+       <section  class="grupos" id="23 de Noviembre"><h1>23 de Noviembre</h1>
+       </section>
+       <section  class="grupos" id="24 de Noviembre"><h1>24 de Noviembre</h1>
+       </section>
+       <section  class="grupos" id="25 de Noviembre"><h1>25 de Noviembre</h1>
+       </section>
+       <section  class="grupos" id="26 de Noviembre"><h1>26 de Noviembre</h1>
+       </section>
+       <section  class="grupos" id="27 de Noviembre"><h1>27 de Noviembre</h1>
+       </section> 
+       <section  class="grupos" id="28 de Noviembre"><h1>28 de Noviembre</h1>
+       </section>
+       <section   class="grupos" id="29 de Noviembre"><h1>29 de Noviembre</h1>
+       </section>
+       <section   class="grupos" id="30 de Noviembre"><h1>30 de Noviembre</h1>
+       </section> 
+       <section  class="grupos" id="1 de Diciembre"><h1>1 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="2 de Diciembre"><h1>2 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="3 de Diciembre"><h1>3 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="4 de Diciembre"><h1>4 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="5 de Diciembre"><h1>5 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="6 de Diciembre"><h1>6 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="9 de Diciembre"><h1>9 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="10 de Diciembre"><h1>10 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="13 de Diciembre"><h1>13 de Diciembre</h1>
+       </section>
+       <section  class="grupos" id="14 de Diciembre"><h1>14 de Diciembre</h1>
+       </section>
+       <section  class="final" id="18 de Diciembre"><h1>18 de Diciembre</h1>
+       </section>
+   </div> 
+   </section>
+
+
+    <section class="content sample-content--hidden">
+      <br> <img alt="welcome to qatar" src='https://pbs.twimg.com/media/FiGwe1SWQAY78zb?format=png&name=360x360'><br>
+     
+      <section id="SecCuentaRegresiva">
+        <div class="bloque">
+          <div id="numDias" class="mdc-layout-grid__cell"></div>
+          <p class="mdc-layout-grid__cell" id="diasParrafo">DÍAS</p>
+        </div>
+        <br> <img alt="rombo" class="rombo" src='http://media-s3-us-east-1.ceros.com/bluevista/images/2016/12/12/1147f53d8996b517f12b6308873601b8/rombo-verde.png'><br>
+        <div class="bloque">
+          <div id="numHoras" class="mdc-layout-grid__cell"></div>
+          <p id="horasParrafo" class="mdc-layout-grid__cell">HORAS</p>
+        </div>
+        <br> <img alt="rombo" class="rombo" src='http://media-s3-us-east-1.ceros.com/bluevista/images/2016/12/12/1147f53d8996b517f12b6308873601b8/rombo-verde.png'><br>
+        <div class="bloque">
+          <div id="numMinutos" class="mdc-layout-grid__cell"></div>
+          <p id="minutosParrafo" class="mdc-layout-grid__cell">MINUTOS</p>
+        </div>
+        <br> <img alt="rombo" class="rombo" src='http://media-s3-us-east-1.ceros.com/bluevista/images/2016/12/12/1147f53d8996b517f12b6308873601b8/rombo-verde.png'><br>
+        <div class="bloque">
+          <div id="numSegundos"></div>
+          <p id="segundosParrafo" class="mdc-layout-grid__cell">SEGUNDOS</p>
+        </div>
+      </section>
+    </section>
+    <section class="content sample-content--hidden">
+     <h1><div class="grid-layout"> 
+      <div class="card"> 
+        <div class="face front"> 
+         <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="imagen mundial">
+    </div> 
+          <div class="face back"> 
+          <h6>QATAR <img src="https://media.istockphoto.com/vectors/flag-of-qatar-vector-id1063898358" alt="bandera catar"></h6> 
+          <h6>ECUADOR <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg" alt="bandera ecuador"></h6> 
+          <h6>SENEGAL<img src="https://img.freepik.com/vector-premium/bandera-senegal-ondeando-al-viento_126712-410.jpg?w=2000" alt="bandera senegal"></h6> 
+          <h6>PAÍSES BAJOS<img src="https://thumbs.dreamstime.com/b/bandera-de-pa%C3%ADses-bajos-124009483.jpg" alt="bandera paises bajos"></h6> 
+          <p>GRUPO A</p> 
+          <div class="link"> 
+          <a href="#"><Details></a> 
+       </div> 
+      </div> 
+    </div> 
+    <div class="card"> 
+      <div class="face front"> 
+        <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="imagen mundial">
+    </div> 
+    <div class="face back"> 
+      <h6>INGLATERRA <img src="https://i.pinimg.com/736x/c9/88/03/c98803dababf408a24a23ffead108692.jpg" alt="bandera inglaterra"></h6> 
+      <h6>IRÁN <img src="https://www.banderas-mundo.es/data/flags/w580/ir.png" alt=""></h6> 
+      <h6>ESTADOS UNIDOS <img src="https://img.freepik.com/foto-gratis/bandera-estados-unidos-america_1401-253.jpg?w=2000" alt="bandera eeuu"></h6> 
+      <h6>GALES <img src="https://img.freepik.com/fotos-premium/bandera-gales-reino-unido_118047-3220.jpg?w=2000" alt="bandera gales"></h6> 
+      <p>GRUPO B</p> 
+      <div class="link"> 
+      <a href="#"><Details></a> 
+    </div> 
+    </div> 
+    </div> 
+    <div class="card"> 
+      <div class="face front"> 
+        <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="imagen mundial">
+    </div> 
+    <div class="face back"> 
+      <h6>ARGENTINA  <img src="https://www.debate.com.mx/__export/1655135058597/sites/debate/img/2022/06/13/bandera_de_argentina-_qux_significa-2.jpg_346753400.jpg" alt="bandera argentina"></h6> 
+      <h6>ARABIA SAUDITA  <img src="https://www.lifeder.com/wp-content/uploads/2021/12/Bandera-de-Arabia-Saudita-jpg.jpg" alt="bandera arabia saudita"></h6> 
+      <h6>MÉXICO  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1280px-Flag_of_Mexico.svg.png" alt="bandera mexico"></h6> 
+      <h6>POLONIA  <img src="https://png.pngtree.com/thumb_back/fw800/background/20220529/pngtree-flowy-fabric-of-poland-national-flag-image_1401763.jpg" alt="bandera polonia"></h6> 
+      <p>GRUPO C</p> 
+      <div class="link"> 
+      <a href="#"><Details></a> 
+    </div> 
+    </div> 
+    </div> 
+    <div class="card"> 
+      <div class="face front"> 
+        <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="imagen mundial">
+    </div> 
+    <div class="face back"> 
+      <h6>FRANCIA  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/270px-Flag_of_France.svg.png" alt="bandera francia"></h6> 
+      <h6>AUSTRALIA  <img src="https://us.123rf.com/450wm/mironovak/mironovak1401/mironovak140100056/25029099-bandera-de-australia-o-la-bandera-australiana-en-el-papel-de-patr%C3%B3n-de-textura-%C3%A1spera.jpg?ver=6" alt="bandera australia"></h6> 
+      <h6>DINAMARCA  <img src="https://us.123rf.com/450wm/goran123rf/goran123rf1401/goran123rf140100076/24898905-bandera-de-danmark-en-textura-satinada-.jpg?ver=6" alt="bandera dinamarca"></h6> 
+      <h6>TÚNEZ  <img src="https://www.sitographics.com/enciclog/banderas/africa/image_2012/Tunez.gif" alt="bandera tunez"></h6> 
+      <p>GRUPO D</p> 
+      <div class="link"> 
+      <a href="#"><Details></a> 
+    </div> 
+    </div> 
+    </div> 
+    
+    <div class="card"> 
+      <div class="face front"> 
+        <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="imagen mundial">
+    </div> 
+    <div class="face back"> 
+      <h6>ESPAÑA  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/640px-Bandera_de_Espa%C3%B1a.svg.png" alt="bandera ESPAÑA"></h6> 
+      <h6>COSTA RICA  <img src="https://http2.mlstatic.com/D_NQ_NP_978181-MLU29425109466_022019-O.jpg" alt="bandera costa rica"></h6> 
+      <h6>ALEMANIA  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Germany_%28state%29.svg/200px-Flag_of_Germany_%28state%29.svg.png" alt="bandera alemania"></h6> 
+      <h6>JAPÓN  <img src="https://s1.significados.com/foto/bandera-japon_sm.png" alt="bandera japon"></h6> 
+      <p>GRUPO E</p> 
+      <div class="link"> 
+      <a href="#"><Details></a> 
+    </div> 
+    </div> 
+    </div> 
+    
+    <div class="card"> 
+      <div class="face front"> 
+        <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="imagen mundial"> 
+    </div> 
+    <div class="face back"> 
+      <h6>BÉLGICA <img src="https://img.freepik.com/vector-premium/bandera-belgica-soplando-viento-parte-serie-bandera-belgica_126712-238.jpg" alt="bandera belgica"></h6> 
+      <h6>CANADÁ <img src="https://banderas.top/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/02/Bandera-de-Canada.jpg.webp" alt="bandera canada"></h6> 
+      <h6>MARRUECOS <img src="https://www.ecured.cu/images/1/10/Bandera_de_Morruecos.png" alt="bandera marruecos"></h6> 
+      <h6>CROACIA <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/800px-Flag_of_Croatia.svg.png" alt="bandera croacia"></h6> 
+      <p>GRUPO F</p> 
+      <div class="link"> 
+      <a href="#"><Details></a> 
+    </div> 
+    </div> 
+    </div> 
+    
+    <div class="card"> 
+      <div class="face front"> 
+        <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="iamgen mundial"> 
+    </div> 
+    <div class="face back"> 
+      <h6>BRASIL <img src="https://t2.uc.ltmcdn.com/es/posts/1/2/5/significado_de_la_bandera_y_escudo_de_brasil_49521_orig.jpg" alt="bandera brasil"></h6> 
+      <h6>SERBIA <img src="https://img.freepik.com/fotos-premium/bandera-serbia-primer-plano-seda_406939-918.jpg" alt="bandera serbia"></h6> 
+      <h6>SUIZA <img src="https://img.freepik.com/vector-premium/bandera-nacional-suiza_47243-1033.jpg" alt="bandera suiza"></h6> 
+      <h6>CAMERÚN <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg" alt="bandera camerun"></h6> 
+      <p>GRUPO G</p> 
+      <div class="link"> 
+      <a href="#"><Details></a> 
+    </div> 
+    </div> 
+    </div> 
+    <div class="card"> 
+      <div class="face front"> 
+        <img src="https://pbs.twimg.com/profile_images/1511271851028275204/OtSVceaY_400x400.jpg" alt="imagen mundial"> 
+    </div> 
+    <div class="face back"> 
+      <h6>PORTUGAL <img src="https://img.freepik.com/foto-gratis/bandera-portugal_1401-202.jpg" alt="bandera portugal"></h6> 
+      <h6>GHANA <img src="https://img.freepik.com/foto-gratis/bandera-ghana_1401-120.jpg?w=2000" alt="bandera ghana"></h6> 
+      <h6>URUGUAY <img src="https://i.pinimg.com/originals/cc/9d/42/cc9d42bacbaaeea1e2e153be9b8cb475.jpg" alt="bandera uruguay"></h6> 
+      <h6>COREA DEL SUR <img src="https://www.lifeder.com/wp-content/uploads/2018/10/bandera-corea-del-sur.jpg" alt="bandera corea del sur"></h6> 
+      <p>GRUPO H</p> 
+      <div class="link"> 
+      <a href="#"><Details></a> 
+    </div> 
+    </div> 
+    </div> 
+    
+    
+    
+    
+    
+    </div>
+    
+    
+
+
+    </h1>
+    </section>
+  </main>
+  <aside class="mdc-snackbar">
+    <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+      <div class="mdc-snackbar__label" aria-atomic="false">
+      </div>
+      <div class="mdc-snackbar__actions" aria-atomic="true">
+        <button type="button" class="mdc-button mdc-snackbar__action">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Cerrar</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+</body>
+
+
+<script src="bundle.js" async></script>
+
+</html>

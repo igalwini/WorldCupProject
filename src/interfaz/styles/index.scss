@@ -1,0 +1,488 @@
+@use "@material/theme" with (
+  $primary: #1b5e20,
+  $secondary: #0288d1,
+  $background: #0288d1,
+);
+@use '@material/button/mdc-button';
+@use '@material/button';
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+@use "@material/icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/card";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/styles";
+@use "@material/snackbar/mdc-snackbar";
+
+@include card.core-styles;
+@include textfield.core-styles;
+p{
+  padding:0px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px auto;
+  background-color: #4c8c4a; 
+}
+h1{
+  padding:80px;
+  margin-top: 50px;
+  align-self: center;
+  font-size: 30px;
+}
+
+.app-bar {
+  position: absolute;
+}
+
+.mdc-top-app-bar {
+  z-index: 7;
+  background-color: #1b5e20;
+}
+
+section {
+  align-self: flex-start;
+}
+#idCont{
+  margin-top: 60px;
+}
+#idFixture{
+  display:flex;
+  flex-wrap: wrap;
+}
+.grupos{
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+position: relative;
+right:70px;
+display: flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: flex-start;
+align-content: flex-start;
+margin: 100px;
+min-width:200px;
+}
+
+.final{
+position: relative;
+right:70px;
+display: flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: flex-start;
+align-content: flex-start;
+margin: 100px;
+}
+.final .mdc-card{
+  
+background-color:#c79100 ;
+}
+#final{
+  position: relative;
+  right: 60px;
+}
+.logo{
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+#octavos{
+ position: relative;
+right: 100px;
+display: flex;
+flex-direction: row;
+} 
+#octavos .mdc-card, #cuartos .mdc-card,#semis .mdc-card, #final .mdc-card{
+  min-width: 125px;
+
+}
+#cuartos{
+  position: relative;
+  right: 210px;
+  display: flex;
+flex-direction:row;
+justify-content:flex-start;
+align-items: flex-start;
+align-content: flex-start;
+}
+#cuartos h1{
+  position: relative;
+  left: 60px;
+}
+#semis{
+  position: relative;
+  right: 160px;
+  display: flex;
+flex-direction:row;
+justify-content:flex-start;
+align-items: flex-start;
+align-content: flex-start;
+}
+#semis h1{
+  position: relative;
+  left: 60px;
+}
+
+.content {
+  margin: 10rem auto;
+  padding-bottom: 20rem;
+  text-align: center;
+}
+
+.sample-content--hidden {
+  display: none;
+}
+
+#logoTimer {
+  color: white;
+  padding: 20px;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 200,
+    'opsz' 48
+}
+
+#logoGrupos {
+  color: white;
+  padding: 30px;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 200,
+    'opsz' 48
+}
+
+#logoFixture {
+  color: white;
+  padding: 20px;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.mdc-tab {
+    background-color: #003300  ;
+}
+.mdc-top-app-bar__title{
+  color: white;
+  font-family: Roboto;
+}
+.mdc-tab__content .mdc-tab__text-label {
+    color: white;
+    font-family: Roboto;
+}
+
+.mdc-text-field {
+    margin: 1rem auto;
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+.mdc-snackbar__actions .mdc-button__label {
+  color: white;
+}
+.mdc-card {
+  height: 350px;
+  width: 200px;
+  padding: 3px;
+  margin: 3px;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  float:left;
+  align-self: center;
+  align-content: center;
+  border: black 2px solid;
+  font-family: Roboto;
+  background-color: #5eb8ff;
+}
+
+.mdc-card__media-content {
+  background-image: url("https://www.nationalgeographic.com.es/medio/2019/05/30/alan-turing_8c5d84c7_1200x630.jpg");
+  background-size: contain;
+  
+}
+.my-card-content {
+  padding: 5px;
+  margin: 5px;
+}
+
+
+.bandera{
+  height: 25px;
+  width: 50px;
+  padding:0px;
+  align-self:center;
+border: black 2px solid;
+}
+.bloque{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  
+}
+.rombo{
+  height: 20px;
+  width: 20px;
+  padding-right: 70px;
+  padding-bottom: 25px;
+}
+#numDias {
+  background-color: rgba(156,15,50,255);
+  box-shadow: 0px 0px #727272;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-left: 580px;
+}
+
+#diasParrafo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #dedede;
+  margin-right: 580px;
+  margin-top:10px;
+}
+
+#numHoras {
+  background-color: rgba(156,15,50,255);
+  box-shadow: 0px 0px #727272;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-left: 580px;
+}
+
+#horasParrafo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #dedede;
+  margin-right: 540px;
+  margin-top:10px;
+}
+
+
+#numMinutos {
+  background-color: rgba(156,15,50,255);
+  box-shadow: 0px 0px #727272;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-left: 580px;
+}
+
+#minutosParrafo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #dedede;
+  margin-right: 510px;
+  margin-top:10px;
+}
+
+#numSegundos {
+  background-color: rgba(156,15,50,255);
+  box-shadow: 0px 0px #727272;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-left: 580px;
+}
+
+#segundosParrafo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #dedede;
+  margin-right: 480px;
+  margin-top:10px;
+}
+@media only screen and (max-width: 800px) {
+  .grupos, #octavos, #cuartos, #semis,#final, .final {
+    display:grid;
+  }
+  #numDias{
+    background-color: rgba(156,15,50,255);
+    box-shadow: 0px 0px #727272;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 150px;
+  }
+  #numHoras{
+    background-color: rgba(156,15,50,255);
+    box-shadow: 0px 0px #727272;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 150px;
+  }
+  
+#numMinutos {
+  background-color: rgba(156,15,50,255);
+  box-shadow: 0px 0px #727272;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-left: 150px;
+}
+#numSegundos {
+  background-color: rgba(156,15,50,255);
+  box-shadow: 0px 0px #727272;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-left: 150px;
+}
+}
+
+.card{ 
+  position: relative; 
+  width: 210px; 
+  height: 210px; 
+  margin-top: 100px;
+  float: left;
+  display: grid;
+  } 
+
+  .card .face{ 
+    position: absolute; 
+    width: 200px; 
+    height: 200px; 
+    backface-visibility: hidden; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    transition: 5s; 
+    } 
+
+    .card .front{ 
+      transform: perspective(600px)rotateY(0deg); 
+      box-shadow: 0 5px 10px #000; 
+      } 
+
+      .card .front img{ 
+        width: 200px; 
+        height: 200px; 
+        object-fit: cover; 
+        } 
+
+        .card .back img{ 
+          position: absolute; 
+          width: 10px; 
+          height: 10px;  
+          } 
+  
+
+        .card .front h3{ 
+          position: absolute; 
+          bottom: 0; 
+          width: 200px; 
+          height: 100px; 
+          line-height: 100px; 
+          color: #fff; 
+          background: #000;
+          text-align: center; 
+          font-size: 80px;
+          } 
+
+           
+
+.card .back{ 
+  transform: perspective(600px)rotateY(180deg); 
+  background: #000; 
+  padding: 3px; 
+  color: #c7c7c7; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  text-align: center; 
+  box-shadow: 0 5px 10px #000; 
+  } 
+
+  .card .back .link{
+    border-top: solid 1px #fff; 
+    height: 50px; 
+    line-height: 50px; 
+    } 
+    
+    
+    .card .back .link a { 
+    color: #c7c7c7; 
+    } 
+    
+     
+    .card .back h6{ 
+    font-size: 10px; 
+    margin-top: 3px; 
+    letter-spacing: 2px; 
+    } 
+    
+     
+    .card .back p{ 
+    letter-spacing: 1px; 
+    margin-top: 3px;
+    } 
+
+    .card:hover .front{
+      transform: perspective(600px) rotateY(180deg);
+    }
+
+    .card:hover .back{
+      transform: perspective(600px) rotateY(360deg);
+    }
+
+.grid-layout{
+  width: 80%;
+  margin: 0 auto;
+}

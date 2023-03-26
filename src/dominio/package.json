@@ -1,0 +1,17 @@
+{
+  "name": "cartelera",
+  "version": "1.0.0",
+  "description": "Ejemplo de modelo dominio Cartelera",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "author": "FIS",
+  "license": "",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "8.27.0",
+    "jest": "^28.1.3",
+    "prettier": "2.7.1"
+  }
+}
